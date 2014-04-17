@@ -26,6 +26,9 @@ requireWhenAccessed('VersionedData', './util/VersionedData');
 requireWhenAccessed('BinaryParser', './util/BinaryParser');
 requireWhenAccessed('Address', './lib/Address');
 requireWhenAccessed('BIP32', './lib/BIP32');
+requireWhenAccessed('BIP32', './lib/BIP32');
+requireWhenAccessed('BIP39', './lib/BIP39');
+requireWhenAccessed('BIP39WordlistEn', './lib/BIP39WordlistEn');
 requireWhenAccessed('Point', './lib/Point');
 requireWhenAccessed('Opcode', './lib/Opcode');
 requireWhenAccessed('Script', './lib/Script');
@@ -37,6 +40,7 @@ requireWhenAccessed('Block', './lib/Block');
 requireWhenAccessed('ScriptInterpreter', './lib/ScriptInterpreter');
 requireWhenAccessed('Bloom', './lib/Bloom');
 requireWhenAccessed('Key', './lib/Key');
+
 Object.defineProperty(module.exports, 'KeyModule', {get: function() {
   console.log('KeyModule is deprecated.');
   return require('bindings')('KeyModule');
@@ -54,4 +58,3 @@ if (typeof process.versions === 'undefined') {
   // Browser specific
   module.exports.bignum.config({EXPONENTIAL_AT: 9999999, DECIMAL_PLACES: 0, ROUNDING_MODE: 1});
 }
-
