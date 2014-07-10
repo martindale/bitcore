@@ -1,6 +1,5 @@
-var imports = require('soop').imports();
-var base58 = imports.base58 || require('../lib/Base58').base58Check;
-var parent = imports.parent || require('./EncodedData');
+var base58 = require('../lib/Base58').base58Check;
+var parent = require('./EncodedData');
 
 
 function VersionedData(version, payload) {
@@ -39,4 +38,4 @@ VersionedData.prototype.payload = function(data) {
   return this.as('binary').slice(1);
 };
 
-module.exports = require('soop')(VersionedData);
+module.exports = VersionedData;
