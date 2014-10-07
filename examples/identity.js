@@ -1,8 +1,8 @@
 var Identity = require('../lib/identity');
-var KeyPair  = require('../lib/keypair');
+var Keypair  = require('../lib/keypair');
 var Hash     = require('../lib/hash');
 
-var keypair = new KeyPair().fromRandom();
+var keypair = new Keypair().fromRandom();
 
 console.log( 'keypair:' , keypair );
 console.log( 'private key:' , keypair.privkey.toString('hex') );
