@@ -1,56 +1,60 @@
 var bitcore = module.exports;
 
-//main bitcoin library
+
+// crypto 
+bitcore.crypto = {};
+bitcore.crypto.BN = require('./lib/crypto/bn');
+bitcore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+bitcore.crypto.Hash = require('./lib/crypto/hash');
+bitcore.crypto.Random = require('./lib/crypto/random');
+bitcore.crypto.Point = require('./lib/crypto/point');
+bitcore.crypto.Signature = require('./lib/crypto/signature');
+
+// encoding
+bitcore.encoding = {};
+bitcore.encoding.Base58 = require('./lib/encoding/base58');
+bitcore.encoding.Base58Check = require('./lib/encoding/base58check');
+bitcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+bitcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+bitcore.encoding.Varint = require('./lib/encoding/varint');
+
+// utilities
+bitcore.util = {};
+bitcore.util.bitcoin = require('./lib/util/bitcoin');
+bitcore.util.buffer = require('./lib/util/buffer');
+bitcore.util.js = require('./lib/util/js');
+bitcore.util.preconditions = require('./lib/util/preconditions');
+
+// transport
+bitcore.transport = {};
+bitcore.transport.Peer = require('./lib/transport/peer');
+bitcore.transport.Messages = require('./lib/transport/messages');
+
+// errors thrown by the library
+bitcore.errors = require('./lib/errors');
+
+// main bitcoin library
 bitcore.Address = require('./lib/address');
-bitcore.Base58 = require('./lib/base58');
-bitcore.Base58Check = require('./lib/base58check');
-bitcore.BIP32 = require('./lib/bip32');
 bitcore.Block = require('./lib/block');
-bitcore.Blockheader = require('./lib/blockheader');
-bitcore.BN = require('./lib/bn');
-bitcore.BufferReader = require('./lib/bufferreader');
-bitcore.BufferWriter = require('./lib/bufferwriter');
-bitcore.Constants = require('./lib/constants');
-bitcore.ECDSA = require('./lib/ecdsa');
-bitcore.Hash = require('./lib/hash');
-bitcore.KDF = require('./lib/kdf');
-bitcore.Keypair = require('./lib/keypair');
-bitcore.Message = require('./lib/message');
+bitcore.BlockHeader = require('./lib/blockheader');
+bitcore.HDPrivateKey = require('./lib/hdprivatekey.js');
+bitcore.HDPublicKey = require('./lib/hdpublickey.js');
+bitcore.Networks = require('./lib/networks');
 bitcore.Opcode = require('./lib/opcode');
-bitcore.Point = require('./lib/point');
-bitcore.Privkey = require('./lib/privkey');
-bitcore.Pubkey = require('./lib/pubkey');
-bitcore.Random = require('./lib/random');
+bitcore.PaymentProtocol = require('./lib/paymentprotocol');
+bitcore.PrivateKey = require('./lib/privatekey');
+bitcore.PublicKey = require('./lib/publickey');
 bitcore.Script = require('./lib/script');
-bitcore.Signature = require('./lib/signature');
 bitcore.Transaction = require('./lib/transaction');
-bitcore.Txin = require('./lib/txin');
-bitcore.Txout = require('./lib/txout');
-bitcore.Varint = require('./lib/varint');
+bitcore.URI = require('./lib/uri');
+bitcore.Unit = require('./lib/unit');
 
-//experimental, nonstandard, or unstable features
-bitcore.expmt = {};
-bitcore.expmt.AES = require('./lib/expmt/aes');
-bitcore.expmt.AESCBC = require('./lib/expmt/aescbc');
-bitcore.expmt.CBC = require('./lib/expmt/cbc');
-bitcore.expmt.ECIES = require('./lib/expmt/ecies');
-bitcore.expmt.StealthAddress = require('./lib/expmt/stealthaddress');
-bitcore.expmt.Stealthkey = require('./lib/expmt/stealthkey');
-bitcore.expmt.StealthMessage = require('./lib/expmt/stealthmessage');
-bitcore.expmt.StealthTx = require('./lib/expmt/stealthtx');
-
-//dependencies, subject to change
+// dependencies, subject to change
 bitcore.deps = {};
-bitcore.deps.aes = require('aes');
 bitcore.deps.bnjs = require('bn.js');
 bitcore.deps.bs58 = require('bs58');
 bitcore.deps.Buffer = Buffer;
 bitcore.deps.elliptic = require('elliptic');
-bitcore.deps.hashjs = require('hash.js');
-bitcore.deps.sha512 = require('sha512');
 
-//bitcore.scriptexec = require('lib/scriptexec');
-//bitcore.tx = require('lib/tx');
-//bitcore.txpartial = require('lib/txpartial');
-
-//bitcore.bip70 = require('lib/bip70');
+// Internal usage, exposed for testing/advanced tweaking
+bitcore._HDKeyCache = require('./lib/hdkeycache');

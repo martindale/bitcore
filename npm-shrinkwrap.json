@@ -1,36 +1,51 @@
 {
-  "name": "bitcore2",
-  "version": "0.0.0",
+  "name": "bitcore",
+  "version": "0.8.0",
   "dependencies": {
     "aes": {
       "version": "0.1.0",
       "from": "aes@=0.1.0",
       "resolved": "https://registry.npmjs.org/aes/-/aes-0.1.0.tgz"
     },
+    "asn1.js": {
+      "version": "0.4.1",
+      "from": "aes@=0.4.1",
+      "resolved": "https://registry.npmjs.org/asn1.js/-/asn1.js-0.4.1.tgz"
+    },
     "bn.js": {
-      "version": "0.14.0",
-      "from": "bn.js@0.14.0",
-      "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-0.14.0.tgz"
+      "version": "0.15.2",
+      "from": "bn.js@0.15.2",
+      "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-0.15.2.tgz"
     },
     "bs58": {
-      "version": "1.2.1",
-      "from": "bs58@=1.2.1",
-      "resolved": "https://registry.npmjs.org/bs58/-/bs58-1.2.1.tgz"
+      "version": "2.0.0",
+      "from": "bs58@2.0.0",
+      "resolved": "https://registry.npmjs.org/bs58/-/bs58-2.0.0.tgz"
+    },
+    "bufferput": {
+      "version": "0.1.2",
+      "from": "bufferput@0.1.2",
+      "resolved": "https://registry.npmjs.org/bufferput/-/bufferput-0.1.2.tgz"
+    },
+    "buffers": {
+      "version": "0.1.1",
+      "from": "buffers@0.1.1",
+      "resolved": "https://registry.npmjs.org/buffers/-/buffers-0.1.1.tgz"
     },
     "elliptic": {
-      "version": "0.15.10",
-      "from": "elliptic@0.15.10",
-      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-0.15.10.tgz",
+      "version": "0.15.12",
+      "from": "elliptic@0.15.12",
+      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-0.15.12.tgz",
       "dependencies": {
         "bn.js": {
-          "version": "0.11.7",
-          "from": "bn.js@0.11.7",
-          "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-0.11.7.tgz"
+          "version": "0.15.2",
+          "from": "bn.js@0.15.2",
+          "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-0.15.2.tgz"
         },
         "hash.js": {
-          "version": "0.2.1",
-          "from": "hash.js@0.2.1",
-          "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-0.2.1.tgz"
+          "version": "0.3.2",
+          "from": "hash.js@0.3.2",
+          "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-0.3.2.tgz"
         },
         "inherits": {
           "version": "2.0.1",
@@ -38,21 +53,46 @@
         }
       }
     },
+    "inherits": {
+      "version": "2.0.1",
+      "from": "inherits@2.0.1",
+      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
+    },
     "hash.js": {
-      "version": "0.3.1",
-      "from": "hash.js@0.3.1",
-      "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-0.3.1.tgz",
+      "version": "0.3.2",
+      "from": "hash.js@0.3.2",
+      "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-0.3.2.tgz",
       "dependencies": {
         "inherits": {
           "version": "2.0.1",
           "from": "inherits@^2.0.1"
         }
       }
+    },
+    "lodash": {
+       "version": "2.4.1",
+       "from": "lodash@=2.4.1",
+       "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.1.tgz"
+    },
+    "jsrsasign": {
+      "version": "0.0.3",
+      "from": "jsrsasign@0.0.3",
+      "resolved": "https://registry.npmjs.org/jsrsasign/-/jsrsasign-0.0.3.tgz"
+    },
+    "protobufjs": {
+      "version": "3.0.0",
+      "from": "protobufjs@3.0.0",
+      "resolved": "https://registry.npmjs.org/protobufjs/-/protobufjs-3.0.0.tgz"
     },
     "sha512": {
       "version": "0.0.1",
       "from": "sha512@=0.0.1",
       "resolved": "https://registry.npmjs.org/sha512/-/sha512-0.0.1.tgz"
+    },
+    "socks5-client": {
+      "version": "0.3.6",
+      "from": "socks5-client@0.3.6",
+      "resolved": "https://registry.npmjs.org/socks5-client/-/socks5-client-0.3.6.tgz"
     }
   }
 }
